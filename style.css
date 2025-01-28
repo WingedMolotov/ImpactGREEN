@@ -11,9 +11,9 @@ body {
 
 #header {
     background-color: #375737;
-    padding-top: 1vh;
+    padding-top: 1vw;
     padding-left: 2vw;
-    padding-bottom: 1vh;
+    padding-bottom: 1vw;
     padding-right: 2vw;
     position: relative;
 }
@@ -43,7 +43,12 @@ body {
 
 #level > p {
     color: white;
-    margin-bottom: .25vw;
+    margin-bottom: 0.25vw;
+}
+
+#level > p > a {
+    color: white;
+    text-decoration: none;
 }
 
 #bar {
@@ -61,8 +66,6 @@ body {
 .items {
     border: 3px solid #5d855d;
     display: inline-block;
-    width: 10vw;
-    height: 10vw;
     margin: 1vw;
     border-radius: 1vw;
     text-align: center;
