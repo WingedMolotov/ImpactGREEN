@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #adadad;
+    font-family: "Lato", serif;
+}
+
+#header {
+    background-color: #375737;
+    padding-top: 1vw;
+    padding-left: 2vw;
+    padding-bottom: 1vw;
+    padding-right: 2vw;
+    position: relative;
+}
+
+#header-text-wrap > h3 {
+    font-size: 1.3vw;
+    color: #a5caa5;
+}
+
+#header-text-wrap > h1 {
+    font-size: 2.6vw;
+    color: white;
+}
+
+#header-text-wrap {
+    display: inline-block;
+}
+
+#level {
+    margin-right: 2vw;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    transform: translateY(-50%);
+}
+
+#level > p {
+    color: white;
+    margin-bottom: .25vw;
+}
+
+#bar {
+    height: 25px;
+    width: 100%;
+    background-color: rgb(201, 194, 178);
+}
+
+#bar-fill {
+    height: inherit;
+    width: 25%;
+    background-color: goldenrod;
+}
+
+.items {
+    border: 3px solid #5d855d;
+    display: inline-block;
+    width: 10vw;
+    height: 10vw;
+    margin: 1vw;
+    border-radius: 1vw;
+    text-align: center;
+    position: relative;
+}
+
+.items > p {
+    margin: 0;
+    position: absolute;
+    font-size: 1.3vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.items:hover {
+    border-radius: 0.3vw;
+    transform: scale(105%);
+    transition: all .1s;
+    border: 3px solid #7a9e7a;
+}
+
+#item1 {
+    background-image: url(k6vlajt6.bmp);
+    background-position: center center;
+}
+
+#item2 {
+    background-image: url(p68r6l95.bmp);
+    background-position: 78% center;
+    background-size: cover;
+}
