@@ -11,9 +11,9 @@ body {
 
 #header {
     background-color: #375737;
-    padding-top: 1vw;
+    padding-top: 1vh;
     padding-left: 2vw;
-    padding-bottom: 1vw;
+    padding-bottom: 1vh;
     padding-right: 2vw;
     position: relative;
 }
@@ -67,6 +67,7 @@ body {
     border-radius: 1vw;
     text-align: center;
     position: relative;
+    transition: all .1s;
 }
 
 .items > p {
@@ -82,17 +83,16 @@ body {
 .items:hover {
     border-radius: 0.3vw;
     transform: scale(105%);
-    transition: all .1s;
     border: 3px solid #7a9e7a;
 }
 
 #item1 {
-    background-image: url(k6vlajt6.bmp);
+    background-image: url(imgs/train.bmp);
     background-position: center center;
 }
 
 #item2 {
-    background-image: url(p68r6l95.bmp);
+    background-image: url(imgs/vegetarian.bmp);
     background-position: 78% center;
     background-size: cover;
 }
