@@ -66,6 +66,8 @@ body {
 .items {
     border: 3px solid #5d855d;
     display: inline-block;
+    height: 10vw;
+    width: 10vw;
     margin: 1vw;
     border-radius: 1vw;
     text-align: center;
@@ -98,4 +100,24 @@ body {
     background-image: url(imgs/vegetarian.bmp);
     background-position: 78% center;
     background-size: cover;
+}
+
+#item3 {
+    background-image: url(imgs/leaf.png);
+    background-position: center center;
+    background-size: 105%;
+    background-repeat: no-repeat;
+    background-color: rgb(129, 174, 146);
+}
+
+#item4 {
+    background-image: url(imgs/hand_earth.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+.xp-text {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
