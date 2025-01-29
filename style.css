@@ -121,3 +121,27 @@ body {
     top: 5px;
     right: 5px;
 }
+
+input[type="checkbox"] {
+  appearance: none;
+  position: relative;
+  height: 1vw;
+  width: 1vw;
+  color: white;
+  /* border: 2px solid black; */
+}
+
+input[type="checkbox"]::before {
+  content: "☆";
+  position: absolute;
+  top: -0.6vw;
+  left: -0.3vw;
+  font-size: 1.25vw;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "⭐";
+  top: -0.2vw;
+  left: -0.2vw;
+  font-size: 1vw;
+}
