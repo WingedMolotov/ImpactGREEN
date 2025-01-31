@@ -271,7 +271,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .x-container > p {
-    transform: translateY(0.15vw);
+    transform: translateY(-3%);
 }
 
 .xp-text-lrg {
