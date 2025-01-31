@@ -13,11 +13,16 @@ sortItems();
 document.querySelectorAll('.items').forEach(item => {
     item.addEventListener('click', (event) => {
         if (!(event.target.className.includes('star-container') || event.target.parentElement.className.includes('star-container')) && !popUpPresent) {
-            console.log('Parent Item ID:', event.target.closest('.items').id);
-            console.log(`pop-up-${event.target.closest('.items').id.replace('item', '')}`)
             document.getElementById(`pop-up-${event.target.closest('.items').id.replace('item', '')}`).style.display = 'block';
             popUpPresent = true;
         }
+    });
+});
+
+document.querySelectorAll('.x-container').forEach (xbox => {
+    xbox.addEventListener('click', (event) => {
+        event.target.closest('.pop-up').style.display = 'none';
+        popUpPresent = false;
     });
 });
 

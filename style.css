@@ -56,7 +56,7 @@ body {
 #bar {
     height: 1.5vw;
     width: 100%;
-    background-color: rgb(201, 194, 178);
+    background-color: #e0e0c6;
     border-radius: 0.5vw;
     overflow: hidden;
 }
@@ -108,7 +108,7 @@ body {
 }
 
 #item2:hover span {
-    color: #ff8e8e;
+    color: #a6e7ae;
 }
 
 #item2 span {
@@ -188,18 +188,17 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]::before {
-  content: "☆";
+  content: "\2606";
   position: absolute;
   top: -0.6vw;
   left: -0.3vw;
   font-size: 1.25vw;
+  color: white;
 }
 
 input[type="checkbox"]:checked::before {
-  content: "⭐";
-  top: -0.2vw;
-  left: -0.2vw;
-  font-size: 1vw;
+  content: "\2605";
+  color: goldenrod;
 }
 
 .star-container {
@@ -214,10 +213,10 @@ input[type="checkbox"]:checked::before {
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    border: 2px rgb(129, 174, 146) solid;
+    border: 3px #5d855d solid;
     border-radius: 1.25vw;
-    min-height: 50vh;
-    min-width: 50vw;
+    min-height: 42.5vh;
+    min-width: 42.5vw;
     color: #FFFFE3;
     padding: 1.25vw;
     background-repeat: no-repeat;
@@ -236,7 +235,7 @@ input[type="checkbox"]:checked::before {
 #pop-up-3 {
     background-image: url(imgs/leaf.png);
     background-size: 50%;
-    background-color: #7a9e7ae1;
+    background-color: #7a9e7a;
 }
 
 #pop-up-4 {
@@ -249,4 +248,70 @@ input[type="checkbox"]:checked::before {
 
 .pop-up > h1 {
     margin-bottom: 1vw;
+}
+
+.x-container {
+    position: absolute;
+    top: 1.25vw;
+    right: 1.25vw;
+    font-size: 1.75vw;
+    background-color: rgba(232, 90, 90, 0.25);
+    width: 2.5vw;
+    height: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: .25vw;
+    cursor: pointer;
+}
+
+.x-container:hover {
+    background-color: rgb(255, 126, 126);
+}
+
+.x-container > p {
+    transform: translateY(0.15vw);
+}
+
+.xp-text-lrg {
+    color: black;
+    background-color: goldenrod;
+    border-radius: 1.5vw;
+    transition-delay: 200ms;
+    transition: box-shadow 1s;
+}
+
+.time-text-lrg {
+    color: black;
+    background-color: #FFFFE3;
+    border-radius: 1.5vw;
+}
+
+.bubble-container-lrg {
+    position: absolute;
+    bottom: 1.25vw;
+    left: 1.25vw;
+}
+
+.bubble-text-lrg {
+    display: inline-block;
+    padding-top: .225vw;
+    padding-bottom: .225vw;
+    padding-right: .525vw;
+    padding-left: .525vw;
+    margin-right: .3vw;
+    font-size: 1.5vw;
+}
+
+.pop-up:hover .xp-text-lrg {
+    box-shadow: 0 0 3vw goldenrod;
+}
+
+.pop-up > h1 {
+    font-size: 2.25vw;
+}
+
+.pop-up > p {
+    font-size: 1.25vw;
 }
