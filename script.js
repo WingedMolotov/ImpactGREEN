@@ -1,4 +1,5 @@
 let starredItems = JSON.parse(localStorage.getItem('popcorn')) || [];
+let popUpPresent = false;
 
 starredItems.forEach(id => {
     let item = document.getElementById(id);
@@ -6,6 +7,18 @@ starredItems.forEach(id => {
         item.querySelector('input[type="checkbox"').checked = true;
         document.getElementById('content').prepend(item);
     }
+});
+sortItems();
+
+document.querySelectorAll('.items').forEach(item => {
+    item.addEventListener('click', (event) => {
+        if (!(event.target.className.includes('star-container') || event.target.parentElement.className.includes('star-container')) && !popUpPresent) {
+            console.log('Parent Item ID:', event.target.closest('.items').id);
+            console.log(`pop-up-${event.target.closest('.items').id.replace('item', '')}`)
+            document.getElementById(`pop-up-${event.target.closest('.items').id.replace('item', '')}`).style.display = 'block';
+            popUpPresent = true;
+        }
+    });
 });
 
 document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
@@ -30,8 +43,6 @@ document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
     });
 });
 
-sortItems();
-
 function sortItems() {
     let itemsArray = Array.from(document.querySelectorAll('.items'));
     let starredItems = itemsArray.filter(item => 
@@ -45,9 +56,12 @@ function sortItems() {
         b.dataset.maxGxp - a.dataset.maxGxp);
 
     const content = document.getElementById('content');
+    const popUps = Array.from(content.querySelectorAll('.pop-up'));
     content.innerHTML = '';
     starredItems.forEach(item =>
         content.append(item));
     unstarredItems.forEach(item =>
-        content.append(item));
+        content.append(item));    
+    popUps.forEach(popUp =>
+        content.append(popUp));
 }

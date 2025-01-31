@@ -207,3 +207,46 @@ input[type="checkbox"]:checked::before {
     top: 4%;
     right: 4%;
 }
+
+.pop-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    border: 2px rgb(129, 174, 146) solid;
+    border-radius: 1.25vw;
+    min-height: 50vh;
+    min-width: 50vw;
+    color: #FFFFE3;
+    padding: 1.25vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#pop-up-1 {
+    background-image: url(imgs/train.bmp);
+}
+
+#pop-up-2 {
+    background-image: url(imgs/vegetarian.bmp);
+}
+
+#pop-up-3 {
+    background-image: url(imgs/leaf.png);
+    background-size: 50%;
+    background-color: #7a9e7ae1;
+}
+
+#pop-up-4 {
+    background-image: url(imgs/hand_earth.png);
+}
+
+#pop-up-5 {
+    background-image: url(imgs/lightbulb.png);
+}
+
+.pop-up > h1 {
+    margin-bottom: 1vw;
+}
